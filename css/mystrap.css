@@ -1,0 +1,22 @@
+.i-border {
+    padding: 20px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 25px;
+   height: 25px;
+    text-align: center;
+  
+    border: solid 1px #DBDBDB;
+    border-radius: 50%;
+ 
+   }
+   
+.container-fluid{
+    width: 90%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    /* background-color: green; */
+    
+ }

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Yummy</title>
+
+
+</head>
+
+<body class="bg-black">
+
+  <div class="">
+    <div class="vh-100 bg-black py-4 d-flex justify-content-between flex-column  menu-bar ">
+
+      <div class="text-white nav-links">
+        <ul>
+          <li class="Search"> <a href="#">Search</a></li>
+          <li> <a href="#">Categories</a></li>
+          <li> <a href="#">Area</a></li>
+          <li> <a href="#">Ingredients</a></li>
+          <li> <a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="">
+        <div class="nav-footer  ">
+          <div class="icons text-white">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="footer m-2">
+            <p class="lead text-white">Copyright Â© 2019 All Rights <br>Reserved.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <nav class=" d-flex flex-column   justify-content-between bg-white p-2 py-4 align-items-center ">
+    <div class="logo">
+      <img src="Images/logo.png" alt="" class="img-fluid">
+    </div>
+
+    <div class="nav-button    ">
+      <div class="menu-botton "> <button class=" border-0 bg-transparent   text-center    ">
+          <i class="fa-solid fa-bars fs-2 menu  "></i></button></div>
+      <div class="" data-bs-theme="light"> <button class="btn-close fs-2  d-none   "></button></div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+
+
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+    </div>
+
+
+    <div>
+      <i class="fa-solid fa-globe d-block"></i>
+      <i class="fa-solid fa-share-nodes"></i>
+    </div>
+  </nav>
+<div class="main">
+  <div class="main-div tap  bg-black   ">
+    <div class="container ps-3">
+      <div class="row py-5 g-4">
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="container w-75 tap search-tap d-none " id="searchContainer">
+    <div class="row py-4 ">
+      <div class="col-md-6 mm ">
+        <input onkeyup="getdata(this.value)" class="form-control bg-transparent text-white" type="text"
+          placeholder="Search By Name">
+      </div>
+      <div class="col-md-6 mm">
+        <input onkeyup="searchByFLetter(this.value)" maxlength="1" class="form-control bg-transparent text-white"
+          type="text" placeholder="Search By First Letter">
+      </div>
+
+
+      <div class="container py-4">
+        <div class="row row-name py-4 g-4 cursor-pointer">
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container w-75 tap  d-none text-warning cursor-pointer" id="Categories">
+
+
+    <div class="container">
+      <div class="row py-5 g-md-3 Category">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container w-75 tap  cursor-pointer d-none" id="Area">
+
+    <div class="container">
+      <div class="row text-white Area g-4 py-4">
+        <div class="col-md-3">
+          <div onclick="getAreaMeals('American')" class="rounded-2 text-center cursor-pointer">
+            <i class="fa-solid fa-house-laptop fa-4x"></i>
+            <h3>American</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container w-75 tap  d-none" id="Ingredients">
+
+    <div class="container text-white">
+      <div class="row py-5 g-md-3 Ingredients ">
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container w-75 tap  d-none" id="Contact-Us">
+
+    <div class="container">
+      <div class="row py-5 g-4 " id="rowData">
+        <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+          <div class="container w-75 text-center">
+            <div class="row g-4">
+              <div class="col-md-6 ">
+                <input id="nameInput" onkeyup="inputsValidation()" type="text" class="form-control"
+                  placeholder="Enter Your Name">
+                <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Special characters and numbers not allowed
+                </div>
+              </div>
+              <div class="col-md-6 ">
+                <input id="emailInput" onkeyup="inputsValidation()" type="email" class="form-control "
+                  placeholder="Enter Your Email">
+                <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Email not valid *exemple@yyy.zzz
+                </div>
+              </div>
+              <div class="col-md-6 ">
+                <input id="phoneInput" onkeyup="inputsValidation()" type="text" class="form-control "
+                  placeholder="Enter Your Phone">
+                <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid Phone Number
+                </div>
+              </div>
+              <div class="col-md-6 ">
+                <input id="ageInput" onkeyup="inputsValidation()" type="number" class="form-control "
+                  placeholder="Enter Your Age">
+                <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid age
+                </div>
+              </div>
+              <div class="col-md-6 ">
+                <input id="passwordInput" onkeyup="inputsValidation()" type="password" class="form-control "
+                  placeholder="Enter Your Password">
+                <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid password *Minimum eight characters, at least one letter and one number:*
+                </div>
+              </div>
+              <div class="col-md-6 ">
+                <input id="repasswordInput" onkeyup="inputsValidation()" type="password" class="form-control "
+                  placeholder="Repassword">
+                <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid repassword
+                </div>
+              </div>
+            </div>
+            <button id="submitBtn" class="btn btn-outline-danger px-2 mt-3">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+ 
+
+<div class="meardetails"></div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="jquery-3.7.1.min.js"></script>
+
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
